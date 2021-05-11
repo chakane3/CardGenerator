@@ -15,19 +15,27 @@ class ViewController: UIViewController {
     @IBOutlet weak var cardNumber: UILabel!
     @IBOutlet weak var cardSymbol: UIImageView!
     
-//    var currentSegmentIndex: Int = 0 {
-//        didSet {
-//            switch segmentControlBar.selectedSegmentIndex {
-//            case 0:
-//                cardSymbol.image = ♠️
-//
-//            case 1:
-//                cardSymbol.image = ♦️
-//            default:
-//                print("ok")
-//            }
-//        }
-//    }
+    var currentSegmentIndex: Int = 0 {
+        didSet {
+            switch segmentControlBar.selectedSegmentIndex {
+            case 0:
+                cardSymbol.image = #imageLiteral(resourceName: "blackdiamond")
+                
+            case 1:
+                cardSymbol.image = #imageLiteral(resourceName: "blackheart")
+
+            case 2:
+                cardSymbol.image = #imageLiteral(resourceName: "blackclub")
+                
+            case 3:
+                cardSymbol.image = #imageLiteral(resourceName: "redspade-1")
+
+
+            default:
+                print("ok")
+            }
+        }
+    }
     
     var cardnumber: Double = 0.0 {
         didSet {
@@ -65,7 +73,8 @@ class ViewController: UIViewController {
         
         
     }
-    @IBAction func chooseSymbol(_ sender: Any) {
+    @IBAction func chooseSymbol(_ sender: UISegmentedControl) {
+        self.currentSegmentIndex = sender.selectedSegmentIndex
     }
     
 }

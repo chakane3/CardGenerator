@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9461DE8C264A846800D8EF22 /* cardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9461DE8B264A846800D8EF22 /* cardModel.swift */; };
 		946A2D732644DF0C007FC93D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946A2D722644DF0C007FC93D /* AppDelegate.swift */; };
 		946A2D752644DF0C007FC93D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946A2D742644DF0C007FC93D /* SceneDelegate.swift */; };
 		946A2D772644DF0C007FC93D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946A2D762644DF0C007FC93D /* ViewController.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9461DE8B264A846800D8EF22 /* cardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cardModel.swift; sourceTree = "<group>"; };
 		946A2D6F2644DF0C007FC93D /* CardGenerator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CardGenerator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		946A2D722644DF0C007FC93D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		946A2D742644DF0C007FC93D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -62,6 +64,7 @@
 				946A2D722644DF0C007FC93D /* AppDelegate.swift */,
 				946A2D742644DF0C007FC93D /* SceneDelegate.swift */,
 				946A2D762644DF0C007FC93D /* ViewController.swift */,
+				9461DE8B264A846800D8EF22 /* cardModel.swift */,
 				946A2D782644DF0C007FC93D /* Main.storyboard */,
 				946A2D7B2644DF0F007FC93D /* Assets.xcassets */,
 				946A2D7D2644DF0F007FC93D /* LaunchScreen.storyboard */,
@@ -142,6 +145,7 @@
 			files = (
 				946A2D772644DF0C007FC93D /* ViewController.swift in Sources */,
 				94A2EB09264647E10094DA42 /* CardModel.swift in Sources */,
+				9461DE8C264A846800D8EF22 /* cardModel.swift in Sources */,
 				946A2D732644DF0C007FC93D /* AppDelegate.swift in Sources */,
 				946A2D752644DF0C007FC93D /* SceneDelegate.swift in Sources */,
 			);
