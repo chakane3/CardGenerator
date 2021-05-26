@@ -14,23 +14,35 @@ class ViewController: UIViewController {
     @IBOutlet weak var stepperBar: UIStepper!
     @IBOutlet weak var cardNumber: UILabel!
     @IBOutlet weak var cardSymbol: UIImageView!
+    @IBOutlet weak var switchColor: UISwitch!
     
     var currentSegmentIndex: Int = 0 {
         didSet {
             switch segmentControlBar.selectedSegmentIndex {
             case 0:
-                cardSymbol.image = #imageLiteral(resourceName: "blackdiamond")
-                
+                if switchColor.isOn {
+                    cardSymbol.image = #imageLiteral(resourceName: "blackdiamond")
+                } else {
+                    cardSymbol.image = #imageLiteral(resourceName: "reddiamond")
+                }
             case 1:
-                cardSymbol.image = #imageLiteral(resourceName: "blackheart")
-
+                if switchColor.isOn {
+                    cardSymbol.image = #imageLiteral(resourceName: "blackheart")
+                } else {
+                    cardSymbol.image = #imageLiteral(resourceName: "redheart")
+                }
             case 2:
-                cardSymbol.image = #imageLiteral(resourceName: "blackclub")
-                
+                if switchColor.isOn {
+                    cardSymbol.image = #imageLiteral(resourceName: "blackclub")
+                } else {
+                    cardSymbol.image = #imageLiteral(resourceName: "redclub")
+                }
             case 3:
-                cardSymbol.image = #imageLiteral(resourceName: "redspade-1")
-
-
+                if switchColor.isOn {
+                    cardSymbol.image = #imageLiteral(resourceName: "blackspade")
+                } else {
+                    cardSymbol.image = #imageLiteral(resourceName: "redspade")
+                }
             default:
                 print("ok")
             }
@@ -53,7 +65,7 @@ class ViewController: UIViewController {
     func configureStepper() {
         stepperBar.minimumValue = 0.0
         stepperBar.maximumValue = 13.0
-        stepperBar.value = 1.0
+        //stepperBar.value = 1.0 <- this will make it jump to 2
     }
 
     // MARK: - Actions and Methods
@@ -77,5 +89,10 @@ class ViewController: UIViewController {
         self.currentSegmentIndex = sender.selectedSegmentIndex
     }
     
+    
+    // may be omitted
+    @IBAction func userSwitchedColors(_ sender: UISwitch) {
+        print(sender.isOn)
+    }
 }
 
